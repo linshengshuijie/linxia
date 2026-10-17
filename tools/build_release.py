@@ -129,7 +129,7 @@ def main() -> None:
     with archive.open("rb") as handle:
         digest = hashlib.file_digest(handle, "sha256").hexdigest()
     Path(str(archive) + ".sha256").write_text(f"{digest}  {archive.name}\n", encoding="ascii")
-    print(f"发布包：{archive}")
+    print(f"Release package: {archive}")
 
 
 if __name__ == "__main__":
