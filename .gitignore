@@ -1,0 +1,30 @@
+# 虚拟环境与打包产物
+venv/
+.venv/
+env/
+build/
+dist/
+/ffmpeg/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.egg-info/
+*.pyc
+
+# 运行期产物：下载的视频、登录态、浏览器配置目录、临时数据、运行日志
+downloads/
+sessions/
+profiles/
+temp/
+logs/
+
+# 编辑器
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

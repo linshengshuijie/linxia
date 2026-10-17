@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linxia"
+version = "1.0.0"
+description = "通用网页视频嗅探下载工具：用临时浏览器模拟真人浏览，从页面自身的网络请求里嗅探媒体流"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "playwright",
+    "aiohttp",
+]
+
+[project.scripts]
+linxia = "linxia.cli:main"
+
+# 仅打包应用代码。
+[tool.setuptools]
+packages = ["linxia"]
