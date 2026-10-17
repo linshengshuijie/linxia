@@ -31,7 +31,7 @@ def prepare_browsers(destination: Path, cache: Path) -> None:
     required = [entry for entry in entries if entry["name"] in
                 ("chromium", "chromium-headless-shell", "ffmpeg", "winldd")
                 and (entry["name"] != "winldd" or os.name == "nt")]
-    directories = [cache / (entry["name"].replace("-", "_") + "-" + entry["revision"])
+    directories = [cache / (entry["name"] + "-" + entry["revision"])
                    for entry in required]
     if sys.platform == "win32" and all(path.is_dir() for path in directories):
         destination.mkdir(parents=True)
